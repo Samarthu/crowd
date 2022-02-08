@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include crowdrun *.css
+recursive-include crowdrun *.csv
+recursive-include crowdrun *.html
+recursive-include crowdrun *.ico
+recursive-include crowdrun *.js
+recursive-include crowdrun *.json
+recursive-include crowdrun *.md
+recursive-include crowdrun *.png
+recursive-include crowdrun *.py
+recursive-include crowdrun *.svg
+recursive-include crowdrun *.txt
+recursive-exclude crowdrun *.pyc
