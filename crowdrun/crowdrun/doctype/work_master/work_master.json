@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:work_name",
+ "creation": "2022-02-09 02:22:39.662823",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "business",
+  "work_name",
+  "work_type",
+  "work_description",
+  "worforce_needed",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "work_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Work Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "work_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Work Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Work Master",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "business",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Business"
+  },
+  {
+   "fieldname": "work_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Work Description ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "worforce_needed",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Worforce Needed",
+   "options": "Single\nMultiple",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-02-15 07:33:49.019268",
+ "modified_by": "Administrator",
+ "module": "Crowdrun",
+ "name": "Work Master",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "work_name, work_type",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

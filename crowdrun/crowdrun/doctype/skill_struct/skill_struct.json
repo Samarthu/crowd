@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-10 01:18:32.267552",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "skill_master",
+  "skill_type",
+  "skill_name",
+  "skill_sub_category",
+  "keyword",
+  "experience_level"
+ ],
+ "fields": [
+  {
+   "fetch_from": "skill_master.skill_type",
+   "fieldname": "skill_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Skill Category",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "skill_master.skill_name",
+   "fieldname": "skill_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Skill Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "experience_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Experience Level",
+   "options": "Beginner\nIntermediate\nExpert",
+   "reqd": 1
+  },
+  {
+   "fieldname": "skill_master",
+   "fieldtype": "Link",
+   "label": "Skill id",
+   "options": "Skill Master"
+  },
+  {
+   "fetch_from": "skill_master.skill_sub_category",
+   "fieldname": "skill_sub_category",
+   "fieldtype": "Data",
+   "label": "Skill sub category "
+  },
+  {
+   "fetch_from": "skill_master.skill_sub_category",
+   "fieldname": "keyword",
+   "fieldtype": "Text",
+   "label": "Keyword"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-02-17 00:17:09.200134",
+ "modified_by": "Administrator",
+ "module": "Crowdrun",
+ "name": "Skill Struct",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

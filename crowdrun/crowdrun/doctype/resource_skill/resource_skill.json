@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{rid}-Resource",
+ "creation": "2022-02-10 01:24:30.629167",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "resource",
+  "column_break_2",
+  "resource_name",
+  "add_skills_section",
+  "skill_id",
+  "skill_category",
+  "skill_name",
+  "column_break_5",
+  "experience_level",
+  "sub_cat_question",
+  "sub_option",
+  "section_break_9",
+  "custom_ouput",
+  "custom_option_input"
+ ],
+ "fields": [
+  {
+   "fieldname": "resource",
+   "fieldtype": "Link",
+   "label": "Resource",
+   "options": "Resource"
+  },
+  {
+   "fieldname": "add_skills_section",
+   "fieldtype": "Section Break",
+   "label": "Add Skills"
+  },
+  {
+   "fetch_from": "skill_id.skill_category",
+   "fieldname": "skill_category",
+   "fieldtype": "Data",
+   "label": "Skill category"
+  },
+  {
+   "fetch_from": "skill_id.skill_name",
+   "fieldname": "skill_name",
+   "fieldtype": "Data",
+   "label": "Skill Name"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "custom_option_input",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Custom Option Input",
+   "options": "Custom User Input"
+  },
+  {
+   "fieldname": "custom_ouput",
+   "fieldtype": "Table",
+   "label": "Custom Ouput",
+   "options": "Custom Output"
+  },
+  {
+   "fieldname": "skill_id",
+   "fieldtype": "Link",
+   "label": "Skill Id",
+   "options": "Skill Master"
+  },
+  {
+   "fieldname": "sub_cat_question",
+   "fieldtype": "Select",
+   "label": "Sub Cat Question"
+  },
+  {
+   "fieldname": "sub_option",
+   "fieldtype": "Select",
+   "label": "Sub Option"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Beginner",
+   "fieldname": "experience_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Experience Level",
+   "options": "Expert\nIntermediate\nBeginner",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "resource.full_name",
+   "fieldname": "resource_name",
+   "fieldtype": "Data",
+   "label": "Resource Name"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-24 01:31:07.715545",
+ "modified_by": "Administrator",
+ "module": "Crowdrun",
+ "name": "Resource Skill",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-12 04:34:50.722174",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "work_name",
+  "work_location",
+  "duration",
+  "column_break_4",
+  "date",
+  "budget",
+  "people_needed",
+  "skill_required_section",
+  "skill_required",
+  "section_break_9",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Work Template",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "work_master.work_name",
+   "fieldname": "work_name",
+   "fieldtype": "Link",
+   "label": "Work Name",
+   "options": "Work Master"
+  },
+  {
+   "fieldname": "work_location",
+   "fieldtype": "Link",
+   "label": "Work Location",
+   "options": "Location Master"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "budget",
+   "fieldtype": "Data",
+   "label": "Budget"
+  },
+  {
+   "fetch_from": "work_name.worforce_needed",
+   "fieldname": "people_needed",
+   "fieldtype": "Select",
+   "label": "people needed",
+   "options": "Single\nMultiple"
+  },
+  {
+   "fieldname": "skill_required_section",
+   "fieldtype": "Section Break",
+   "label": "Skill Required"
+  },
+  {
+   "fieldname": "skill_required",
+   "fieldtype": "Table",
+   "label": "Skill Required",
+   "options": "Skill Struct"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-02-16 07:32:01.909466",
+ "modified_by": "Administrator",
+ "module": "Crowdrun",
+ "name": "Work Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
