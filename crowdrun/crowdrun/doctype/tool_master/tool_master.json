@@ -2,13 +2,14 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:tool_id",
- "creation": "2022-02-15 05:37:54.436414",
+ "creation": "2022-02-24 10:45:42.358829",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "tool_id",
-  "tool_type",
+  "tool_category",
+  "column_break_3",
   "tool_name",
   "specific_details_section",
   "specific_details"
@@ -21,13 +22,6 @@
    "label": "Tool id",
    "reqd": 1,
    "unique": 1
-  },
-  {
-   "fieldname": "tool_type",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Tool Type",
-   "reqd": 1
   },
   {
    "fieldname": "tool_name",
@@ -46,11 +40,22 @@
    "fieldtype": "Table",
    "label": "Specific Details",
    "options": "Custom Input"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tool_category",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tool Category",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-17 09:20:45.527685",
+ "modified": "2022-02-26 00:34:58.906943",
  "modified_by": "Administrator",
  "module": "Crowdrun",
  "name": "Tool Master",

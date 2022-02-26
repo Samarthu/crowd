@@ -11,21 +11,21 @@ class ResourceSkill(Document):
         r = []
         for d in data.custom_category:
             r.append(d.question)
-            self.append(("custom_ouput"),
-                        {
-                            "question": d.question
-                        }
-                        )
+        #     self.append(("custom_ouput"),
+        #                 {
+        #                     "question": d.question
+        #                 }
+        #                 )
         return r
 
 
-    @frappe.whitelist()    
-    def get_option(self,field):
-        doc=frappe.get_doc('Custom User Input',field)
-        r1=[]
-        for d in doc.options:
-            r1.append(d.option)
-        return r1    
+    # @frappe.whitelist()    
+    # def get_option(self,field):
+    #     doc=frappe.get_doc('Custom User Input',field)
+    #     r1=[]
+    #     for d in doc.options:
+    #         r1.append(d.option)
+    #     return r1    
     
 	# def get_options(field,as_dict=1):
     # doc = frappe.get_doc('Custom User Input', field)
