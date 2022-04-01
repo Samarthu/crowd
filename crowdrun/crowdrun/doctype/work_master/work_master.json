@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:work_name",
- "creation": "2022-02-09 02:22:39.662823",
+ "creation": "2022-02-24 10:45:42.731899",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -54,17 +54,16 @@
   },
   {
    "fieldname": "worforce_needed",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Worforce Needed",
-   "options": "Single\nMultiple",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-02-15 07:33:49.019268",
+ "modified": "2022-03-22 00:08:02.660037",
  "modified_by": "Administrator",
  "module": "Crowdrun",
  "name": "Work Master",

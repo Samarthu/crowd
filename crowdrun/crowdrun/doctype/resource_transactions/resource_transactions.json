@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-03-23 19:12:29.688189",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_from",
+  "payment_to",
+  "amount",
+  "transaction_type",
+  "type_of_payment"
+ ],
+ "fields": [
+  {
+   "fieldname": "payment_from",
+   "fieldtype": "Data",
+   "label": "Payment from"
+  },
+  {
+   "fieldname": "payment_to",
+   "fieldtype": "Data",
+   "label": "Payment To"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "label": "Transaction Type",
+   "options": "Credit\nDebit"
+  },
+  {
+   "default": "via points",
+   "fieldname": "type_of_payment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of Payment",
+   "options": "via cash\nvia points",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-03-23 19:13:10.092020",
+ "modified_by": "Administrator",
+ "module": "Crowdrun",
+ "name": "Resource Transactions",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

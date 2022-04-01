@@ -5,9 +5,12 @@ frappe.ui.form.on('Bank Details', {
 	// refresh: function(frm) {
 
 	// }
+
+	resource_id: function(frm){
+		//console.log("hiii")
+	},
 	
 	upi:function(frm){
-		var sam = "sama";
 		if(frm.doc.upi)
 		{
 			frm.set_df_property("upi_id","hidden",0);

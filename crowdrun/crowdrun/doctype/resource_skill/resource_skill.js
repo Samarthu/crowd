@@ -35,7 +35,7 @@ function set_options(field)
 	var df = frappe.meta.get_docfield("Custom Output","select_option", cur_frm.doc.name);
 	let opts = [];
 	frappe.db.get_doc("Custom User Input",field)
-	.then(r=>{
+	.then(r =>{
 		let opt_set = r.options; 
 		 opt_set.map((od)=>{
 		 	opts.push(od.option)
@@ -47,12 +47,12 @@ function set_options(field)
 	// df.fieldtype = "Select";
 	// df.options = opts;
 }
-let que =[];
-let idx = 0;
+//let que =[];
+//let idx = 0;
 frappe.ui.form.on('Resource Skill', {
 	//   const data= get_subCat_Que(frm.doc.skill_master
 	 skill_id:(frm)=> { 
-
+		 //cur_frm.set_df_property("experience_level","deafult","intermediate")
 		 frm.call({
 		  method :"get_sub_cats",
 		  doc:frm.doc,
@@ -62,7 +62,7 @@ frappe.ui.form.on('Resource Skill', {
 		  },
 		  callback:(r)=>{
 			  //console.log(r.message)
-			  que =r.message;
+			  //que =r.message;
 			  cur_frm.clear_table("custom_output");
 			  $.each(r.message,function(_i,e){
 				  let entry = frm.add_child("custom_output");
@@ -78,7 +78,7 @@ frappe.ui.form.on('Resource Skill', {
 	  });
 	},
 	refresh:(frm)=>{
-		frm.set_df_property("custom_output","read_only", frm.is_new() ? 0 : 1)
+		
 	}
 	// sub_cat_question:(frm)=>{
 		// let d1;

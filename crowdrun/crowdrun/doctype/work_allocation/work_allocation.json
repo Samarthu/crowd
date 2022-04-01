@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{work_template_id} - {resource_id}",
+ "creation": "2022-03-15 19:15:16.227049",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "work_template_id",
+  "resource_id",
+  "work_name",
+  "resource_name",
+  "resource_mobile_no",
+  "column_break_5",
+  "resource_email",
+  "status",
+  "duration",
+  "budget",
+  "get_resource_skills",
+  "get_resource_tools"
+ ],
+ "fields": [
+  {
+   "fieldname": "work_template_id",
+   "fieldtype": "Link",
+   "label": " Work Template Id",
+   "options": "Work Template"
+  },
+  {
+   "fieldname": "resource_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Resource Id",
+   "options": "Resource"
+  },
+  {
+   "fetch_from": "resource_id.full_name",
+   "fieldname": "resource_name",
+   "fieldtype": "Data",
+   "label": "Resource Name"
+  },
+  {
+   "fetch_from": "work_template_id.work_name",
+   "fieldname": "work_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Work Name"
+  },
+  {
+   "fetch_from": "resource_id.mobile_no",
+   "fieldname": "resource_mobile_no",
+   "fieldtype": "Data",
+   "label": "Resource Mobile No"
+  },
+  {
+   "fetch_from": "resource_id.email",
+   "fieldname": "resource_email",
+   "fieldtype": "Data",
+   "label": "Resource Email"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Matched\nAllocated\nCompleted"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "get_resource_skills",
+   "fieldtype": "Button",
+   "label": "Get Resource Skills"
+  },
+  {
+   "fieldname": "get_resource_tools",
+   "fieldtype": "Button",
+   "label": "Get Resource Tools"
+  },
+  {
+   "fetch_from": "work_template_id.duration",
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration"
+  },
+  {
+   "fetch_from": "work_template_id.budget",
+   "fieldname": "budget",
+   "fieldtype": "Data",
+   "label": "Budget"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-03-22 00:13:14.327196",
+ "modified_by": "Administrator",
+ "module": "Crowdrun",
+ "name": "Work Allocation",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

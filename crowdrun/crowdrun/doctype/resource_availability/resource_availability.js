@@ -5,4 +5,11 @@ frappe.ui.form.on('Resource Availability', {
 	// refresh: function(frm) {
 
 	// }
+	to_date :function(frm){
+		if(frm.doc.from_date > frm.doc.to_date){
+		   frappe.msgprint("fromDate should be less than toDate");
+		   frm.set_value("to_date","")
+		   frm.refresh_field("to_date")
+		}
+   }
 });

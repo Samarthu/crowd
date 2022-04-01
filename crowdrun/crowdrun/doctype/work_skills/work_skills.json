@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-03-02 03:13:02.862282",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "skill_id",
+  "skill_category",
+  "skill_name",
+  "mandatory"
+ ],
+ "fields": [
+  {
+   "fieldname": "skill_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Skill id",
+   "options": "Skill Master",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "mandatory",
+   "fieldtype": "Check",
+   "label": "Mandatory"
+  },
+  {
+   "fetch_from": "skill_id.skill_category",
+   "fieldname": "skill_category",
+   "fieldtype": "Data",
+   "label": "Skill Category",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "skill_id.skill_name",
+   "fieldname": "skill_name",
+   "fieldtype": "Data",
+   "label": "Skill Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-03-05 01:05:46.944133",
+ "modified_by": "Administrator",
+ "module": "Crowdrun",
+ "name": "work skills",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

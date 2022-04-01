@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-03-23 13:49:50.835322",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "work_allocation_id",
+  "work_id",
+  "resource_id",
+  "er_points",
+  "status",
+  "make_payment"
+ ],
+ "fields": [
+  {
+   "fieldname": "work_allocation_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Work Allocation Id ",
+   "options": "Work Allocation"
+  },
+  {
+   "fetch_from": "work_allocation_id.work_template_id",
+   "fieldname": "work_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Work Id",
+   "options": "Work Template"
+  },
+  {
+   "fetch_from": "work_allocation_id.resource_id",
+   "fieldname": "resource_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Resource Id"
+  },
+  {
+   "fieldname": "er_points",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ER Points"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Initiated\nAwaiting Approval\nPending\nSuccess"
+  },
+  {
+   "fieldname": "make_payment",
+   "fieldtype": "Button",
+   "label": "Make Payment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-04-01 14:01:33.935343",
+ "modified_by": "Administrator",
+ "module": "Crowdrun",
+ "name": "Work Payments",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

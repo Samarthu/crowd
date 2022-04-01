@@ -9,7 +9,7 @@ function set_options(field)
 	let opts = [];
 	frappe.db.get_doc("Custom User Input",field)
 	.then(r=>{
-		let opt_set = r.options; 
+		 let opt_set = r.options; 
 		 opt_set.map((od)=>{
 		 	opts.push(od.option)
 		 })
@@ -33,7 +33,7 @@ frappe.ui.form.on('Resource Tool', {
 			doc : frm.doc,
 			args:{
 				doctype : "Tool Master",
-				field :frm.doc.tool_id
+				field : frm.doc.tool_id
 			},
 			callback:(r)=>{
 				//console.log(r.message);

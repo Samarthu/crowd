@@ -1,21 +1,27 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2022-02-12 04:34:50.722174",
+ "autoname": "format:{work_name}-{####}",
+ "creation": "2022-02-24 10:45:41.404374",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "work_name",
-  "work_location",
-  "duration",
-  "column_break_4",
-  "date",
   "budget",
+  "duration",
+  "column_break_3",
+  "work_type",
   "people_needed",
+  "status",
+  "add_work_availability_section",
+  "work_availability",
+  "column_break_8",
+  "location_name",
   "skill_required_section",
   "skill_required",
   "section_break_9",
+  "tool_required",
   "amended_from"
  ],
  "fields": [
@@ -36,22 +42,6 @@
    "options": "Work Master"
   },
   {
-   "fieldname": "work_location",
-   "fieldtype": "Link",
-   "label": "Work Location",
-   "options": "Location Master"
-  },
-  {
-   "fieldname": "duration",
-   "fieldtype": "Duration",
-   "label": "Duration"
-  },
-  {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "label": "Date"
-  },
-  {
    "fieldname": "budget",
    "fieldtype": "Data",
    "label": "Budget"
@@ -59,9 +49,8 @@
   {
    "fetch_from": "work_name.worforce_needed",
    "fieldname": "people_needed",
-   "fieldtype": "Select",
-   "label": "people needed",
-   "options": "Single\nMultiple"
+   "fieldtype": "Data",
+   "label": "people needed"
   },
   {
    "fieldname": "skill_required_section",
@@ -72,24 +61,71 @@
    "fieldname": "skill_required",
    "fieldtype": "Table",
    "label": "Skill Required",
-   "options": "Skill Struct"
+   "options": "work skills"
   },
   {
    "fieldname": "section_break_9",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Tool Required"
   },
   {
-   "fieldname": "column_break_4",
+   "fieldname": "tool_required",
+   "fieldtype": "Table",
+   "label": "Tool Required",
+   "options": "work tools"
+  },
+  {
+   "fieldname": "column_break_3",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "work_name.work_type",
+   "fieldname": "work_type",
+   "fieldtype": "Data",
+   "label": "Work Type"
+  },
+  {
+   "fieldname": "add_work_availability_section",
+   "fieldtype": "Section Break",
+   "label": "Add Work Availability"
+  },
+  {
+   "fieldname": "work_availability",
+   "fieldtype": "Link",
+   "label": "work Availability",
+   "options": "Work Availability"
+  },
+  {
+   "fetch_from": "work_availability.sub_location_name",
+   "fieldname": "location_name",
+   "fieldtype": "Data",
+   "label": "Location Name"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Unallocated",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Unallocated\nAllocated"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-02-16 07:32:01.909466",
+ "modified": "2022-03-22 00:10:12.573229",
  "modified_by": "Administrator",
  "module": "Crowdrun",
  "name": "Work Template",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

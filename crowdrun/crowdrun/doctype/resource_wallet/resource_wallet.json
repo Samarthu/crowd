@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{resource_id}",
+ "creation": "2022-03-23 12:46:48.956551",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "resource_id",
+  "er_points",
+  "see_inr_conversion",
+  "column_break_3",
+  "indian_currency",
+  "enter_redeem_amount",
+  "redeem",
+  "transaction_history_section",
+  "transaction_history"
+ ],
+ "fields": [
+  {
+   "fieldname": "resource_id",
+   "fieldtype": "Link",
+   "label": "Resource Id",
+   "options": "Resource"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "er_points",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "ER Points wallet"
+  },
+  {
+   "fieldname": "transaction_history",
+   "fieldtype": "Table",
+   "label": "Transaction History",
+   "options": "Resource Transactions"
+  },
+  {
+   "fieldname": "transaction_history_section",
+   "fieldtype": "Section Break",
+   "label": "Transaction History"
+  },
+  {
+   "fieldname": "redeem",
+   "fieldtype": "Button",
+   "label": "Redeem"
+  },
+  {
+   "fieldname": "indian_currency",
+   "fieldtype": "Currency",
+   "label": "Indian Currency Conversion"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "enter_redeem_amount",
+   "fieldtype": "Float",
+   "label": "Enter Redeem Amount(in Points)"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "see_inr_conversion",
+   "fieldtype": "Button",
+   "label": "See INR Conversion"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-03-24 12:51:22.044956",
+ "modified_by": "Administrator",
+ "module": "Crowdrun",
+ "name": "Resource Wallet",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

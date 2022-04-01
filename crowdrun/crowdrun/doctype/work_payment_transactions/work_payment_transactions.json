@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2022-03-23 12:11:15.794821",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "work_allocation",
+  "points_tranfer",
+  "transferred_for",
+  "transferred_to"
+ ],
+ "fields": [
+  {
+   "fieldname": "work_allocation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Work Allocation",
+   "options": "Work Allocation"
+  },
+  {
+   "fetch_from": "work_allocation.budget",
+   "fieldname": "points_tranfer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Points Tranfer"
+  },
+  {
+   "fetch_from": "work_allocation.resource_id",
+   "fieldname": "transferred_to",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Transferred To"
+  },
+  {
+   "fetch_from": "work_allocation.work_template_id",
+   "fieldname": "transferred_for",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Transferred for"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-03-23 12:24:20.136991",
+ "modified_by": "Administrator",
+ "module": "Crowdrun",
+ "name": "Work Payment Transactions",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "format:{first_name}-{DD}",
- "creation": "2022-02-09 01:37:30.298260",
+ "creation": "2022-02-24 10:45:42.542930",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -124,14 +124,13 @@
   {
    "fieldname": "dob",
    "fieldtype": "Date",
-   "label": "DOB",
-   "reqd": 1
+   "label": "DOB"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-02-15 07:44:08.208450",
+ "modified": "2022-03-15 14:54:05.332699",
  "modified_by": "Administrator",
  "module": "Crowdrun",
  "name": "Resource",
