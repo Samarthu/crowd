@@ -7,7 +7,7 @@ frappe.ui.form.on('Bank Details', {
 	// }
 
 	resource_id: function(frm){
-		//console.log("hiii")
+		//console.log("hiii").......
 	},
 	
 	upi:function(frm){
