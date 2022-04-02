@@ -30,10 +30,10 @@ def get_avalability(resource):
     return res 
 
 @frappe.whitelist()
-def change_workAllocation_status(**krgs):
-    
+def change_workAllocation_status(**krgs):  
     data = get_payload(krgs)
     doc = frappe.get_doc("Work Allocation" ,data['work_allocation_id'])
+    ##resource = doc.resource_id
     doc.status = data['status']
     doc.save()
     if(doc.status == "Completed"):
@@ -43,7 +43,7 @@ def change_workAllocation_status(**krgs):
         wp_doc.er_points = data['er_points']
         wp_doc.insert()
         frappe.db.commit()
-        
+    k = data['list']    
     return "success"
     
     
