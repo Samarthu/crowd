@@ -10,12 +10,12 @@ class WorkPayments(Document):
         work_tran_doc.work_allocation = field
         work_tran_doc.insert()
         frappe.db.commit()
-        
+        conv_amt = int(frappe.db.get_single_value("ER Points Value","er_point_val"))
         res_wallet1 = frappe.get_list("Resource Wallet",filters = {'name' : self.resource_id})
         if(res_wallet1):
             res_w = frappe.get_doc("Resource Wallet", res_wallet1[0])
             res_w.er_points+=float(self.er_points)
-            res_w.indian_currency = (res_w.er_points / 5)
+            res_w.indian_currency = (res_w.er_points / conv_amt)
             res_w.append("transaction_history",{
 			"payment_from": self.work_id,
             "payment_to":self.resource_id,
@@ -28,7 +28,7 @@ class WorkPayments(Document):
             res_wallet = frappe.new_doc("Resource Wallet")
             res_wallet.resource_id = self.resource_id
             res_wallet.er_points += float(self.er_points)
-            res_wallet.indian_currency = (res_wallet.er_points / 5)
+            res_wallet.indian_currency = (res_wallet.er_points / conv_amt)
             res_wallet.append("transaction_history",{
 			"payment_from": self.work_id,
             "payment_to":self.resource_id,

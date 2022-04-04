@@ -12,7 +12,6 @@ def get_payload(payload):
         if(isinstance(payload.get('data'),bytes)):
             payload['data'] = payload['data'].decode('utf-8')
         return json.loads(payload['data'])
-    
     # DATA FIELD DOESNOT EX IN PAYLOAD
     # LATTE COMPABILITY
     else:
